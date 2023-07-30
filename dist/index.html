@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formValidation</title>
+    <script src="main.js" defer></script>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #C3E8BD;
+        }
+
+        header {
+
+            width: 100vw;
+            background: #5B7553;
+            text-align: center;
+        }
+
+        section {
+            
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            padding: 50px;
+
+        }
+
+        main {
+
+            background: #8EB897;
+            border-radius: 5px;
+            width: 80vw;
+            padding: 10px;
+        }
+
+        form {
+
+         display: flex;
+         flex-flow: row wrap;
+         row-gap: 5px;
+
+        }
+
+        fieldset {
+            
+            display: flex;
+            flex-flow: column nowrap;
+            padding-left: 20px;
+            gap: 5px;
+            border: 0;
+            width: 50%;
+
+        }
+
+        input {
+
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+
+        .error {
+
+            border: 1px solid red;
+        }
+
+        .valid {
+            border: 1px solid green;
+        }
+        button {
+
+            width: 30%;
+            background: #040403;
+            color: whitesmoke;
+            font-weight: 700;
+            border: 1px outset black;
+            padding: 5px;   
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>form Validation</h1>
+    </header>
+    <section>
+        <main>
+            <form novalidate action="" method="">
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input required name="email" id="email" type="email">
+                </fieldset>
+                <fieldset>
+                    <label for="country">Country</label>
+                    <input required name="country" id="country" type="text">
+                </fieldset>
+                <fieldset>
+                    <label for="zipCode">Zip Code</label>
+                    <input pattern="\d{4}" required name="zip code" id="zipCode" type="text">
+                </fieldset>
+                <fieldset>
+                    <label for="password">Password</label>
+                    <input required name="password" id="password" type="password">
+                </fieldset>
+                <fieldset>
+                <button type="submit">submit</button>
+                </fieldset>
+            </form>
+        </main>
+    </section>
+</body>
+</html>
